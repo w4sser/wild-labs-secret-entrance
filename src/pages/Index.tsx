@@ -14,13 +14,13 @@ import lordImg from '@/assets/team/Lord.jpg';
 import magnusImg from '@/assets/team/Magnus.jpg';
 
 const teamMembers = [
-  { name: 'Wasser', title: 'CEO & Co-Founder', img: wasserImg },
-  { name: 'Johannes', title: 'Art Director', img: johannesImg },
-  { name: 'Carlos', title: 'Wild Engineer & Co-Founder', img: carlosImg },
+  { name: 'Robert Wasser', title: 'Wild CEO & Co-Founder', img: wasserImg },
+  { name: 'Johannes Ohlenschläger', title: 'Wild UX & UI Director & Co-Founder', img: johannesImg },
+  { name: 'Carlos Villarreal Kwasek', title: 'Wild Art Director & Co-Founder', img: carlosImg },
   { name: 'Magnus Sjöberg', title: 'Wild Engineer & Co-Founder', img: magnusImg },
-  { name: 'Grenis', title: 'Game Designer', img: grenisImg },
-  { name: 'Axel', title: 'Creative Director', img: axelImg },
-  { name: 'Lord', title: 'Technical Director', img: lordImg },
+  { name: 'Marcus Grenängen', title: 'Wild Engineer & Co-Founder', img: grenisImg },
+  { name: 'Axel Ljung', title: 'Wild Engineer & Co-Founder', img: axelImg },
+  { name: 'Joakim Lord', title: 'Wild CTO & Co-Founder', img: lordImg },
 ];
 
 const Index = () => {
