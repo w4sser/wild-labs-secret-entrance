@@ -11,13 +11,15 @@ import carlosImg from '@/assets/team/Carlos.jpg';
 import grenisImg from '@/assets/team/Grenis.jpg';
 import johannesImg from '@/assets/team/Johannes.jpg';
 import lordImg from '@/assets/team/Lord.jpg';
+import magnusImg from '@/assets/team/Magnus.jpg';
 
 const teamMembers = [
   { name: 'Wasser', title: 'CEO & Co-Founder', img: wasserImg },
-  { name: 'Axel', title: 'Creative Director', img: axelImg },
-  { name: 'Carlos', title: 'Wild Engineer & Co-Founder', img: carlosImg },
-  { name: 'Grenis', title: 'Game Designer', img: grenisImg },
   { name: 'Johannes', title: 'Art Director', img: johannesImg },
+  { name: 'Carlos', title: 'Wild Engineer & Co-Founder', img: carlosImg },
+  { name: 'Magnus Sjöberg', title: 'Wild Engineer & Co-Founder', img: magnusImg },
+  { name: 'Grenis', title: 'Game Designer', img: grenisImg },
+  { name: 'Axel', title: 'Creative Director', img: axelImg },
   { name: 'Lord', title: 'Technical Director', img: lordImg },
 ];
 
