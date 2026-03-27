@@ -190,9 +190,9 @@ const Index = () => {
               <div key={name}
                 className={`reveal opacity-0 group text-center ${i === teamMembers.length - 1 && teamMembers.length % 3 === 1 ? 'sm:col-start-2' : ''}`}
                 style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="relative mb-4 overflow-hidden aspect-square">
+                <div className="relative mb-4 overflow-hidden aspect-square bg-card">
                   <div className="absolute inset-0 border border-border group-hover:border-primary/40 transition-colors duration-500 z-10 pointer-events-none" />
-                  <img src={img} alt={name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+                  <img src={img} alt={name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-[filter,transform] duration-700 group-hover:scale-105" />
                   <div className="absolute inset-0 bg-primary/5 mix-blend-color group-hover:opacity-0 transition-opacity duration-500" />
                 </div>
                 <h3 className="font-display text-sm md:text-base font-semibold tracking-tight">{name}</h3>
