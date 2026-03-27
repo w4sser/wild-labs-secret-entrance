@@ -13,9 +13,9 @@ import johannesImg from '@/assets/team/Johannes.jpg';
 import lordImg from '@/assets/team/Lord.jpg';
 
 const teamMembers = [
-  { name: 'Wasser', title: 'Co-Founder', img: wasserImg },
+  { name: 'Wasser', title: 'CEO & Co-Founder', img: wasserImg },
   { name: 'Axel', title: 'Creative Director', img: axelImg },
-  { name: 'Carlos', title: 'Lead Engineer', img: carlosImg },
+  { name: 'Carlos', title: 'Wild Engineer & Co-Founder', img: carlosImg },
   { name: 'Grenis', title: 'Game Designer', img: grenisImg },
   { name: 'Johannes', title: 'Art Director', img: johannesImg },
   { name: 'Lord', title: 'Technical Director', img: lordImg },
