@@ -1,8 +1,25 @@
 import { useEffect, useRef, useCallback } from 'react';
 import wolfLogo from '@/assets/WL_Wolf_CLR1.png';
 import wolfWhite from '@/assets/WL_Wolf_White.png';
+import fullLogo from '@/assets/WL_logo_CLR1-2.png';
 import fontLogo from '@/assets/WL_Font_CLR1.png';
 import { Beaker, Heart, Users } from 'lucide-react';
+
+import wasserImg from '@/assets/team/Wasser.jpg';
+import axelImg from '@/assets/team/Axel.jpg';
+import carlosImg from '@/assets/team/Carlos.jpg';
+import grenisImg from '@/assets/team/Grenis.jpg';
+import johannesImg from '@/assets/team/Johannes.jpg';
+import lordImg from '@/assets/team/Lord.jpg';
+
+const teamMembers = [
+  { name: 'Wasser', title: 'Co-Founder', img: wasserImg },
+  { name: 'Axel', title: 'Creative Director', img: axelImg },
+  { name: 'Carlos', title: 'Lead Engineer', img: carlosImg },
+  { name: 'Grenis', title: 'Game Designer', img: grenisImg },
+  { name: 'Johannes', title: 'Art Director', img: johannesImg },
+  { name: 'Lord', title: 'Technical Director', img: lordImg },
+];
 
 const Index = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
@@ -37,7 +54,6 @@ const Index = () => {
     <div ref={setupObserver} className="bg-background text-foreground overflow-x-hidden">
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col items-center justify-center scanlines overflow-hidden">
-        {/* Particle dots */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {Array.from({ length: 30 }).map((_, i) => (
             <div
@@ -53,7 +69,6 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Glow orb */}
         <div
           className="absolute w-[500px] h-[500px] rounded-full bg-primary/20 pointer-events-none"
           style={{ animation: 'glow-pulse 6s ease-in-out infinite', filter: 'blur(80px)' }}
@@ -61,14 +76,9 @@ const Index = () => {
 
         <div className="relative z-10 flex flex-col items-center gap-8 px-4">
           <img
-            src={wolfLogo}
-            alt="Wild Labs Wolf Emblem"
-            className="w-32 h-32 md:w-48 md:h-48 object-contain drop-shadow-[0_0_40px_rgba(25,224,212,0.3)]"
-          />
-          <img
-            src={fontLogo}
+            src={fullLogo}
             alt="Wild Labs"
-            className="h-10 md:h-14 object-contain"
+            className="w-64 h-auto md:w-80 object-contain drop-shadow-[0_0_40px_rgba(25,224,212,0.3)]"
           />
           <p className="text-muted-foreground text-base md:text-lg tracking-wide max-w-md text-center font-body">
             Something powerful is being built behind closed doors.
@@ -133,9 +143,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* TEAM */}
+      <section className="py-32 px-6 md:px-16 lg:px-24">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16 reveal opacity-0">
+            <p className="text-primary/60 font-display text-xs tracking-[0.3em] uppercase mb-4">The Pack</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
+              Meet the Team
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+            {teamMembers.map(({ name, title, img }, i) => (
+              <div
+                key={name}
+                className="reveal opacity-0 group text-center"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                <div className="relative mb-4 overflow-hidden aspect-square">
+                  <div className="absolute inset-0 border border-border group-hover:border-primary/40 transition-colors duration-500 z-10 pointer-events-none" />
+                  <img
+                    src={img}
+                    alt={name}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/5 mix-blend-color group-hover:opacity-0 transition-opacity duration-500" />
+                </div>
+                <h3 className="font-display text-sm md:text-base font-semibold tracking-tight">{name}</h3>
+                <p className="text-muted-foreground text-xs md:text-sm font-body mt-1">{title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* IN THE LAB */}
       <section className="relative py-32 px-6 md:px-16 lg:px-24 blueprint-grid overflow-hidden">
-        {/* Corner technical elements */}
         <div className="absolute top-8 left-8 w-16 h-16 border-l border-t border-primary/20 pointer-events-none" />
         <div className="absolute top-8 right-8 w-16 h-16 border-r border-t border-primary/20 pointer-events-none" />
         <div className="absolute bottom-8 left-8 w-16 h-16 border-l border-b border-primary/20 pointer-events-none" />
@@ -152,7 +194,6 @@ const Index = () => {
           <p className="text-muted-foreground text-base md:text-lg leading-relaxed font-body">
             More information will be revealed soon.
           </p>
-          {/* Technical diagram accent */}
           <div className="mt-12 flex items-center justify-center gap-2">
             <div className="w-12 h-px bg-primary/30" />
             <div className="w-2 h-2 border border-primary/40 rotate-45" />
